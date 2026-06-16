@@ -27,7 +27,13 @@ void	ft_putnbr(int nb)
 		ft_putchar('-');
 		nblong = -nblong;
 	}
-	if (nblong / 10 != 0)
+	if (nblong / 10 != 0) 
+	{
 		ft_putnbr(nblong / 10);
-	ft_putchar(nblong % 10 + 48);
+		ft_putnbr(nblong % 10);
+	}
+	else
+	{
+		ft_putchar(nblong + '0'); 
+	}
 }
